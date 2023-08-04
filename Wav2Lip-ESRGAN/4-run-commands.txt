@@ -1,0 +1,3 @@
+python inference_realesrgan.py -n RealESRGAN_x4plus -i inputs --face_enhance --outscale 3.5
+
+ffmpeg -r 30 -i frame_%05d_out.jpg -i kekw.mp3 -vcodec libx264 -crf 25 -preset veryslow -acodec copy hd.mkv

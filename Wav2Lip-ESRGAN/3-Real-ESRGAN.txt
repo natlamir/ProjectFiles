@@ -1,0 +1,36 @@
+cd c:\ai
+
+conda create -n Real-ESRGAN python=3.10
+
+conda activate Real-ESRGAN
+
+git clone https://github.com/xinntao/Real-ESRGAN.git
+
+cd Real-ESRGAN
+
+delete from requirements:
+opencv-python
+torch>=1.7
+torchvision
+
+conda install -c conda-forge opencv
+
+pip install -r requirements.txt
+
+python setup.py develop
+
+pip install chardet
+
+pip install ffmpeg-python
+
+conda install -c conda-forge ffmpeg
+
+Install with conda from pytorch website:
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+To check Cuda:
+python
+import torch
+torch.cuda.is_available()
+
+download models/weights

@@ -1,4 +1,0 @@
-1. enable long path with registry edit
-2. install vs 2022 / visual c++ 2015-2022 redistributable
-3. ffmpeg
-4. git

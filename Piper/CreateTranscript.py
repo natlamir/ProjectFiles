@@ -14,7 +14,7 @@ wav_files = sorted(wav_files, key=lambda x: int(os.path.splitext(x)[0]))
 transcript_dict = {}
 
 # Open a text file for writing the transcripts
-with open("transcript.csv", "w") as transcript_file:
+with open("metadata.csv", "w") as transcript_file:
     # Iterate through each WAV file
     for wav_file in wav_files:
         print(f"Transcribing {wav_file}")
@@ -39,4 +39,4 @@ with open("transcript.csv", "w") as transcript_file:
         # Write the result to the transcript file without space after '|'
         transcript_file.write(f"{wav_file}|{transcribed_text}\n")
 
-print("Transcription complete. Check 'transcript.csv' for results.")
+print("Transcription complete. Check 'metadata.csv' for results.")
